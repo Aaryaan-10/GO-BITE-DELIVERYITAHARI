@@ -1,39 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+<meta name="description" content="GoBite Delivery Itahari — Night Kitchen. Hot food, late nights, fast delivery.">
+<meta name="theme-color" content="#08080b">
 
-  <meta
-    name="description"
-    content="Night Kitchen by GoBite Delivery Itahari — late-night food delivery in Itahari. Momos, chicken, noodles, fried rice, biryani, snacks and drinks."
-  >
+<title>GoBite Delivery Itahari | Night Kitchen</title>
 
-  <meta name="theme-color" content="#08080b">
+<link rel="icon" href="logo.jpg">
 
-  <title>Night Kitchen | GoBite Delivery Itahari</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="icon" href="logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  >
-
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="intro-active">
 
-  <!-- ================= ANNOUNCEMENT ================= -->
+<section class="bag-intro" id="bagIntro">
+
+  <div class="intro-glow glow-a"></div>
+  <div class="intro-glow glow-b"></div>
+
+  <div class="intro-brand">
+    <img src="logo.jpg" alt="GoBite">
+    <span>GOOD FOOD · FAST DELIVERY</span>
+  </div>
+
+  <div class="bag-stage">
+
+    <button
+      class="delivery-bag"
+      id="deliveryBag"
+      aria-label="Open GoBite delivery bag"
+    >
+
+      <span class="bag-shadow"></span>
+
+      <span class="handle handle-back"></span>
+
+      <span class="bag-body">
+
+        <span class="bag-side"></span>
+
+        <span class="bag-front">
+
+          <span class="zip"></span>
+
+          <span class="logo-plate">
+            <img src="logo.jpg" alt="">
+          </span>
+
+          <span class="bag-slogan">
+            GOOD FOOD · FAST DELIVERY
+          </span>
+
+          <span class="bag-city">
+            ITAHARI
+          </span>
+
+          <span class="bag-pocket"></span>
+
+        </span>
+
+        <span class="bag-inside">
+          <span>
+            <img src="logo.jpg" alt="">
+          </span>
+        </span>
+
+        <span class="flap"></span>
+
+        <span class="handle handle-front"></span>
+
+      </span>
+
+    </button>
+
+  </div>
+
+  <div class="intro-copy">
+
+    <div class="kicker">
+      WELCOME TO GOBITE
+    </div>
+
+    <h1>
+      Open the bag.<br>
+      <span>Enter the kitchen.</span>
+    </h1>
+
+    <p id="introStatus">
+      Tap the GoBite bag to explore tonight's menu.
+    </p>
+
+    <button class="enter-btn" id="enterBagBtn">
+      ↗ &nbsp; Tap to enter
+    </button>
+
+    <button class="skip-intro" id="skipIntro">
+      Skip intro &amp; view menu
+    </button>
+
+  </div>
+
+  <div class="progress">
+    <span id="progressBar"></span>
+  </div>
+
+</section>
+
+
+<div class="site-shell" id="siteShell">
 
   <div class="announcement">
     <span>⚡ FAST DELIVERY</span>
@@ -43,8 +125,6 @@
   </div>
 
 
-  <!-- ================= NAVBAR ================= -->
-
   <header class="site-header">
 
     <nav class="nav container">
@@ -52,10 +132,10 @@
       <a href="#home" class="brand">
 
         <div class="brand-logo">
-          <img src="logo.jpg" alt="GoBite Delivery Itahari">
+          <img src="logo.jpg" alt="GoBite">
         </div>
 
-        <div class="brand-text">
+        <div>
           <strong>Night Kitchen</strong>
           <small>GoBite Delivery Itahari</small>
         </div>
@@ -64,85 +144,68 @@
 
 
       <div class="nav-links">
-
         <a href="#home">Home</a>
         <a href="#menu">Menu</a>
         <a href="#why-us">Why Us</a>
         <a href="#contact">Contact</a>
-
       </div>
 
 
-      <button
-        class="cart-btn"
-        id="openCart"
-        type="button"
-      >
+      <div class="nav-actions">
 
-        <span class="cart-icon">🛒</span>
+        <button class="replay-btn" id="replayBag">
+          ↻ <span>Bag</span>
+        </button>
 
-        <span class="cart-label">Order</span>
+        <button class="cart-btn" id="openCart">
+          🛒
+          <span class="cart-label">Order</span>
+          <b id="cartCount">0</b>
+        </button>
 
-        <b id="cartCount">0</b>
-
-      </button>
+      </div>
 
     </nav>
 
   </header>
 
 
-  <!-- ================= MAIN ================= -->
-
   <main>
-
-
-    <!-- ================= HERO ================= -->
 
     <section class="hero" id="home">
 
-      <div class="hero-glow glow-one"></div>
-      <div class="hero-glow glow-two"></div>
+      <div class="hero-glow one"></div>
+      <div class="hero-glow two"></div>
 
       <div class="hero-grid container">
 
-
-        <!-- HERO TEXT -->
-
         <div class="hero-copy reveal">
 
-          <div class="eyebrow">
+          <div class="kicker">
             🌙 ITAHARI'S LATE-NIGHT FOOD DESTINATION
           </div>
 
           <h1>
-            Cravings don't
-            <span>sleep.</span>
+            Cravings don't <span>sleep.</span>
           </h1>
 
           <p>
             Hot momos, crispy chicken, noodles, fried rice,
-            biryani, snacks and refreshing drinks —
-            freshly prepared and delivered for your late-night cravings.
+            biryani, snacks and refreshing drinks — freshly prepared
+            and delivered for your late-night cravings.
           </p>
-
 
           <div class="hero-actions">
 
-            <a
-              href="#menu"
-              class="btn btn-primary"
-            >
-              Explore Menu
-              <span>→</span>
+            <a href="#menu" class="btn primary">
+              Explore Menu →
             </a>
-
 
             <a
               href="https://wa.me/9779700161163"
               target="_blank"
               rel="noopener"
-              class="btn btn-whatsapp"
+              class="btn whatsapp"
             >
               WhatsApp Order
             </a>
@@ -172,47 +235,33 @@
         </div>
 
 
-        <!-- HERO VISUAL -->
-
         <div class="hero-card reveal">
 
-          <div class="orbit orbit-a"></div>
-          <div class="orbit orbit-b"></div>
+          <div class="orbit a"></div>
+          <div class="orbit b"></div>
 
           <div class="food-orb">
-
-            <span>🍗</span>
-            <span>🥟</span>
-            <span>🍜</span>
-            <span>🍚</span>
-
+            <i>🍗</i>
+            <i>🥟</i>
+            <i>🍜</i>
+            <i>🍚</i>
           </div>
 
 
           <div class="hero-card-inner">
 
             <div class="hero-logo">
-
-              <img
-                src="logo.jpg"
-                alt="GoBite Delivery Itahari logo"
-              >
-
+              <img src="logo.jpg" alt="GoBite">
             </div>
 
-            <span class="mini-label">
-              TONIGHT'S MOOD
-            </span>
+            <small>TONIGHT'S MOOD</small>
 
             <h2>Hungry?</h2>
 
-            <p>
-              We've got you covered.
-            </p>
+            <p>We've got you covered.</p>
 
             <div class="open-pill">
-              <i></i>
-              Open 4:00 PM – 3:00 AM
+              ● Open 4:00 PM – 3:00 AM
             </div>
 
           </div>
@@ -224,40 +273,41 @@
     </section>
 
 
-    <!-- ================= MENU ================= -->
-
     <section class="menu-section" id="menu">
 
       <div class="container">
 
-
-        <div class="section-heading reveal">
+        <div class="menu-heading reveal">
 
           <div>
 
-            <span class="section-kicker">
-              OUR MENU
+            <span class="kicker">
+              GOBITE MENU
             </span>
 
             <h2>
               Pick your midnight favorite.
             </h2>
 
+            <p>
+              Fresh food · Great taste · Delivered to you
+            </p>
+
           </div>
 
-          <p>
-            Add your favorites to the cart and order directly through WhatsApp.
-          </p>
+          <button
+            class="bag-again"
+            id="menuBagButton"
+          >
+            🛍️ Open the bag again
+          </button>
 
         </div>
 
 
-        <!-- SEARCH + FILTER -->
-
         <div class="menu-tools reveal">
 
-
-          <div class="search-box">
+          <div class="search">
 
             <span>⌕</span>
 
@@ -271,64 +321,37 @@
           </div>
 
 
-          <div
-            class="filters"
-            id="filters"
-          >
+          <div class="filters">
 
-            <button
-              class="filter active"
-              data-filter="all"
-            >
+            <button class="filter active" data-filter="all">
               All
             </button>
 
-            <button
-              class="filter"
-              data-filter="nonveg"
-            >
+            <button class="filter" data-filter="nonveg">
               Non-Veg
             </button>
 
-            <button
-              class="filter"
-              data-filter="veg"
-            >
+            <button class="filter" data-filter="veg">
               Veg
             </button>
 
-            <button
-              class="filter"
-              data-filter="momo"
-            >
+            <button class="filter" data-filter="momo">
               Mo:Mo
             </button>
 
-            <button
-              class="filter"
-              data-filter="noodles"
-            >
+            <button class="filter" data-filter="noodles">
               Noodles
             </button>
 
-            <button
-              class="filter"
-              data-filter="rice"
-            >
+            <button class="filter" data-filter="rice">
               Rice
             </button>
 
-            <button
-              class="filter"
-              data-filter="biryani"
-            >
+            <button class="filter" data-filter="biryani">
               Biryani
             </button>
 
-            <button
-              class="filter"
-              data-filter="drinks"
-            >
+            <button class="filter" data-filter="drinks">
               Drinks
             </button>
 
@@ -337,23 +360,19 @@
         </div>
 
 
-        <!-- MENU -->
-
-        <div
-          class="menu-grid"
-          id="menuGrid"
-        ></div>
+        <div class="menu-grid" id="menuGrid"></div>
 
 
-        <div
-          class="no-results"
-          id="noResults"
-        >
-          <div>🍽️</div>
+        <div class="no-results" id="noResults">
+
+          🍽️
+
           <h3>No food found</h3>
+
           <p>
             Try another search or category.
           </p>
+
         </div>
 
       </div>
@@ -361,19 +380,14 @@
     </section>
 
 
-    <!-- ================= WHY US ================= -->
-
-    <section
-      class="why-section"
-      id="why-us"
-    >
+    <section class="why-section" id="why-us">
 
       <div class="container">
 
         <div class="section-heading centered reveal">
 
-          <span class="section-kicker">
-            WHY NIGHT KITCHEN
+          <span class="kicker">
+            WHY GOBITE
           </span>
 
           <h2>
@@ -389,20 +403,14 @@
 
         <div class="benefits">
 
-
           <article class="benefit reveal">
 
-            <div class="benefit-icon">
-              ⚡
-            </div>
+            <b>⚡</b>
 
-            <h3>
-              Fast Delivery
-            </h3>
+            <h3>Fast Delivery</h3>
 
             <p>
-              We focus on getting your food hot and fresh
-              to your doorstep.
+              Hot and fresh food delivered to your doorstep.
             </p>
 
           </article>
@@ -410,17 +418,12 @@
 
           <article class="benefit reveal">
 
-            <div class="benefit-icon">
-              🔥
-            </div>
+            <b>🔥</b>
 
-            <h3>
-              Made Fresh
-            </h3>
+            <h3>Made Fresh</h3>
 
             <p>
-              Your order is prepared fresh so every late-night
-              meal tastes right.
+              Your order is prepared fresh for every late-night meal.
             </p>
 
           </article>
@@ -428,21 +431,15 @@
 
           <article class="benefit reveal">
 
-            <div class="benefit-icon">
-              💸
-            </div>
+            <b>💸</b>
 
-            <h3>
-              Fair Prices
-            </h3>
+            <h3>Fair Prices</h3>
 
             <p>
-              A wide selection of familiar favorites
-              at straightforward prices.
+              A wide selection of favorites at straightforward prices.
             </p>
 
           </article>
-
 
         </div>
 
@@ -450,8 +447,6 @@
 
     </section>
 
-
-    <!-- ================= CTA ================= -->
 
     <section class="cta-section">
 
@@ -461,7 +456,7 @@
 
           <div>
 
-            <span class="section-kicker">
+            <span class="kicker">
               READY TO ORDER?
             </span>
 
@@ -470,27 +465,20 @@
             </h2>
 
             <p>
-              Choose your food, add it to your cart
-              and send your order through WhatsApp.
+              Choose your food, add it to your cart and send
+              your order through WhatsApp.
             </p>
 
           </div>
 
 
-          <div class="cta-actions">
+          <div class="hero-actions">
 
-            <a
-              href="#menu"
-              class="btn btn-primary"
-            >
+            <a href="#menu" class="btn primary">
               View Menu
             </a>
 
-            <button
-              class="btn btn-ghost"
-              id="contactOrder"
-              type="button"
-            >
+            <button class="btn ghost" id="contactOrder">
               Start Order
             </button>
 
@@ -505,38 +493,26 @@
   </main>
 
 
-  <!-- ================= FOOTER ================= -->
-
-  <footer
-    class="footer"
-    id="contact"
-  >
+  <footer class="footer" id="contact">
 
     <div class="container footer-grid">
 
-
       <div>
 
-        <a
-          href="#home"
-          class="brand"
-        >
+        <a href="#home" class="brand">
 
           <div class="brand-logo">
-            <img
-              src="logo.jpg"
-              alt="GoBite Delivery Itahari"
-            >
+            <img src="logo.jpg" alt="GoBite">
           </div>
 
-          <div class="brand-text">
+          <div>
             <strong>Night Kitchen</strong>
             <small>GoBite Delivery Itahari</small>
           </div>
 
         </a>
 
-        <p class="footer-note">
+        <p>
           Hot food. Late nights. Good vibes.
         </p>
 
@@ -548,7 +524,7 @@
         <strong>Delivery</strong>
 
         <span>
-          📍 Itahari & nearby areas
+          📍 Itahari &amp; nearby areas
         </span>
 
         <span>
@@ -562,39 +538,27 @@
 
         <strong>Connect With Us</strong>
 
-
-        <a
-          href="tel:+9779700161163"
-        >
+        <a href="tel:+9779700161163">
           📞 9700161163
         </a>
-
 
         <a
           href="https://wa.me/9779700161163"
           target="_blank"
-          rel="noopener"
-          class="social-link"
         >
           💬 WhatsApp
         </a>
 
-
         <a
           href="https://www.facebook.com/gobitedeliveryitahari"
           target="_blank"
-          rel="noopener"
-          class="social-link"
         >
           Facebook ↗
         </a>
 
-
         <a
           href="https://www.instagram.com/gobitedeliveryitahari"
           target="_blank"
-          rel="noopener"
-          class="social-link"
         >
           Instagram ↗
         </a>
@@ -615,62 +579,36 @@
   </footer>
 
 
-  <!-- ================= CART ================= -->
-
-  <div
-    class="cart-overlay"
-    id="cartOverlay"
-  ></div>
+  <div class="cart-overlay" id="cartOverlay"></div>
 
 
-  <aside
-    class="cart-drawer"
-    id="cartDrawer"
-    aria-label="Shopping cart"
-  >
-
+  <aside class="cart-drawer" id="cartDrawer">
 
     <div class="cart-header">
 
       <div>
 
-        <span class="section-kicker">
+        <span class="kicker">
           YOUR ORDER
         </span>
 
-        <h2>
-          Cart
-        </h2>
+        <h2>Cart</h2>
 
       </div>
 
-
-      <button
-        class="close-btn"
-        id="closeCart"
-        type="button"
-        aria-label="Close cart"
-      >
+      <button class="close-btn" id="closeCart">
         ×
       </button>
 
     </div>
 
 
-    <div
-      class="cart-items"
-      id="cartItems"
-    ></div>
+    <div class="cart-items" id="cartItems"></div>
 
 
-    <div
-      class="cart-empty"
-      id="cartEmpty"
-    >
+    <div class="cart-empty" id="cartEmpty">
 
-      <div>
-        🛒
-      </div>
+      🛒
 
       <h3>
         Your cart is empty
@@ -687,9 +625,7 @@
 
       <div class="total-row">
 
-        <span>
-          Subtotal
-        </span>
+        <span>Subtotal</span>
 
         <strong>
           Rs <span id="cartTotal">0</span>
@@ -697,18 +633,8 @@
 
       </div>
 
-
-      <p class="small-note">
-        Delivery charge, if applicable, will be confirmed when ordering.
-      </p>
-
-
-      <button
-        class="order-submit"
-        id="sendOrder"
-        type="button"
-      >
-        💬 Send Order on WhatsApp
+      <button class="send-order" id="sendOrder">
+        Send Order on WhatsApp ↗
       </button>
 
     </div>
@@ -716,17 +642,12 @@
   </aside>
 
 
-  <!-- ================= TOAST ================= -->
+  <div class="toast" id="toast"></div>
 
-  <div
-    class="toast"
-    id="toast"
-  >
-    Added to your order
-  </div>
+</div>
 
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
