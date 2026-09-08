@@ -1,11 +1,3 @@
-```javascript
-/* =========================================================
-   NIGHT KITCHEN
-   GoBite Delivery Itahari
-   PREMIUM JAVASCRIPT
-   ========================================================= */
-
-
 /* =========================================================
    MENU
    Keep your COMPLETE existing menu array here.
