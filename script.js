@@ -1,477 +1,471 @@
+```javascript
+/* =========================================================
+   NIGHT KITCHEN
+   GoBite Delivery Itahari
+   PREMIUM JAVASCRIPT
+   ========================================================= */
+
+
+/* =========================================================
+   MENU
+   Keep your COMPLETE existing menu array here.
+   ========================================================= */
+
 const menu = [
-  {"name":"Chicken Roast","price":300,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Chicken Lollipop (Dry)","price":350,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Chicken Lollipop (Chilly)","price":380,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Chicken Chilli","price":320,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Crispy Chicken","price":360,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Chicken Roll","price":220,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Mix Roll","price":250,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Chicken Chilly","price":350,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Chicken Sausage (2 pcs)","price":160,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Sausage Chilly (2 pcs)","price":180,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Hot Chicken Wings","price":340,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Wings Fry","price":320,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Chicken Drumstick","price":300,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Chicken Drumstick (Chilly)","price":350,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Dragon Chicken","price":380,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Chicken Fry Sadeko","price":350,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Chicken Boil Sadeko","price":360,"cat":"nonveg","group":"Non-Veg Snacks"},
-  {"name":"Jate Kalejo","price":320,"cat":"nonveg","group":"Non-Veg Snacks"},
 
-  {"name":"Chatpate","price":150,"cat":"veg","group":"Veg Snacks"},
-  {"name":"Wai-Wai Sadeko","price":150,"cat":"veg","group":"Veg Snacks"},
-  {"name":"Peanuts Sadeko","price":200,"cat":"veg","group":"Veg Snacks"},
-  {"name":"Bhatmas Sadeko","price":120,"cat":"veg","group":"Veg Snacks"},
-  {"name":"French Fries","price":200,"cat":"veg","group":"Veg Snacks"},
-  {"name":"Mustang Aalu","price":200,"cat":"veg","group":"Veg Snacks"},
-  {"name":"Aalu Jira","price":190,"cat":"veg","group":"Veg Snacks"},
-  {"name":"Veg Rolls","price":140,"cat":"veg","group":"Veg Snacks"},
-  {"name":"Paneer Chilly","price":300,"cat":"veg","group":"Veg Snacks"},
-  {"name":"Aalu Dum","price":140,"cat":"veg","group":"Veg Snacks"},
-  {"name":"Paneer Pakoda (8 pcs)","price":280,"cat":"veg","group":"Veg Snacks"},
-  {"name":"Aalu Pakoda (8 pcs)","price":200,"cat":"veg","group":"Veg Snacks"},
-  {"name":"Aalu Chhop (8 pcs)","price":220,"cat":"veg","group":"Veg Snacks"},
-  {"name":"Aalu Tama","price":180,"cat":"veg","group":"Veg Snacks"},
-  {"name":"Lachha Paratha (pcs)","price":50,"cat":"veg","group":"Veg Snacks"},
-  {"name":"Lachha Paratha (Ghee)","price":60,"cat":"veg","group":"Veg Snacks"},
-  {"name":"Lachha Paratha (Cheese)","price":70,"cat":"veg","group":"Veg Snacks"},
+  /* ---------- NON VEG SNACKS ---------- */
 
-  {"name":"Chicken Momo","price":190,"cat":"momo","group":"Mo:Mo"},
-  {"name":"Chicken Chilli Momo","price":230,"cat":"momo","group":"Mo:Mo"},
-  {"name":"Chicken Fry Momo","price":210,"cat":"momo","group":"Mo:Mo"},
-  {"name":"Chicken Jhol Momo","price":250,"cat":"momo","group":"Mo:Mo"},
-  {"name":"Chicken Sadeko Momo","price":220,"cat":"momo","group":"Mo:Mo"},
-  {"name":"Chicken Kothey Momo","price":250,"cat":"momo","group":"Mo:Mo"},
-  {"name":"Veg Momo","price":140,"cat":"momo","group":"Mo:Mo"},
-  {"name":"Veg Chilli Momo","price":180,"cat":"momo","group":"Mo:Mo"},
-  {"name":"Veg Fry Momo","price":160,"cat":"momo","group":"Mo:Mo"},
-  {"name":"Veg Jhol Momo","price":190,"cat":"momo","group":"Mo:Mo"},
-  {"name":"Veg Sadeko Momo","price":170,"cat":"momo","group":"Mo:Mo"},
-  {"name":"Veg Kothey Momo","price":180,"cat":"momo","group":"Mo:Mo"},
+  {
+    name:"Chicken Roast",
+    price:300,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
 
-  {"name":"Chicken Gravy","price":350,"cat":"nonveg","group":"Non-Veg Gravy"},
-  {"name":"Mutton Gravy","price":400,"cat":"nonveg","group":"Non-Veg Gravy"},
-  {"name":"Egg Curry","price":180,"cat":"nonveg","group":"Non-Veg Gravy"},
-  {"name":"Keema Curry","price":300,"cat":"nonveg","group":"Non-Veg Gravy"},
+  {
+    name:"Chicken Lollipop (Dry)",
+    price:350,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
 
-  {"name":"Mutter Paneer","price":300,"cat":"veg","group":"Veg Gravy"},
-  {"name":"Butter Paneer","price":320,"cat":"veg","group":"Veg Gravy"},
-  {"name":"Paneer Butter Masala","price":340,"cat":"veg","group":"Veg Gravy"},
-  {"name":"Aalu Dum Gravy","price":160,"cat":"veg","group":"Veg Gravy"},
+  {
+    name:"Chicken Lollipop (Chilly)",
+    price:380,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
 
-  {"name":"Plain Omelette","price":80,"cat":"nonveg","group":"Egg Items"},
-  {"name":"Masala Omelette","price":100,"cat":"nonveg","group":"Egg Items"},
-  {"name":"Boiled Egg","price":50,"cat":"nonveg","group":"Egg Items"},
-  {"name":"Egg Roll","price":180,"cat":"nonveg","group":"Egg Items"},
+  {
+    name:"Chicken Chilli",
+    price:320,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
 
-  {"name":"Veg Chowmein","price":140,"cat":"noodles","group":"Noodles"},
-  {"name":"Chicken Chowmein","price":180,"cat":"noodles","group":"Noodles"},
-  {"name":"Egg Chowmein","price":160,"cat":"noodles","group":"Noodles"},
-  {"name":"Current Noodles","price":120,"cat":"noodles","group":"Noodles"},
-  {"name":"Chicken Current Noodles","price":180,"cat":"noodles","group":"Noodles"},
-  {"name":"Egg Current Noodles","price":160,"cat":"noodles","group":"Noodles"},
-  {"name":"Mix Current Noodles","price":230,"cat":"noodles","group":"Noodles"},
-  {"name":"Chicken Keema Noodles","price":300,"cat":"noodles","group":"Noodles"},
+  {
+    name:"Crispy Chicken",
+    price:360,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
 
-  {"name":"Chicken Burger + Fries","price":290,"cat":"nonveg","group":"Burger & Sandwich"},
-  {"name":"Veg Burger + Fries","price":240,"cat":"veg","group":"Burger & Sandwich"},
-  {"name":"Veg Sandwich","price":200,"cat":"veg","group":"Burger & Sandwich"},
-  {"name":"Chicken Sandwich","price":250,"cat":"nonveg","group":"Burger & Sandwich"},
+  {
+    name:"Chicken Roll",
+    price:220,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
 
-  {"name":"Plain Rice","price":120,"cat":"rice","group":"Rice Items"},
-  {"name":"Veg Fried Rice","price":190,"cat":"rice","group":"Rice Items"},
-  {"name":"Chicken Fried Rice","price":280,"cat":"rice","group":"Rice Items"},
-  {"name":"Keema Fried Rice","price":300,"cat":"rice","group":"Rice Items"},
-  {"name":"Jeera Rice","price":130,"cat":"rice","group":"Rice Items"},
-  {"name":"Egg Fried Rice","price":240,"cat":"rice","group":"Rice Items"},
+  {
+    name:"Mix Roll",
+    price:250,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
 
-  {"name":"Chicken Biryani","price":390,"cat":"biryani","group":"Biryani"},
-  {"name":"Paneer Biryani","price":340,"cat":"biryani","group":"Biryani"},
-  {"name":"Mutton Biryani","price":499,"cat":"biryani","group":"Biryani"},
-  {"name":"Special Chicken Biryani","price":599,"cat":"biryani","group":"Biryani"},
-  {"name":"Special Mutton Biryani","price":699,"cat":"biryani","group":"Biryani"},
+  {
+    name:"Chicken Chilly",
+    price:350,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
 
-  {"name":"250ml Coke / Fanta / Sprite","price":80,"cat":"drinks","group":"Soft Drinks"},
-  {"name":"500ml Coke / Fanta / Sprite","price":160,"cat":"drinks","group":"Soft Drinks"},
-  {"name":"1 Litre Coke / Fanta / Sprite","price":200,"cat":"drinks","group":"Soft Drinks"},
-  {"name":"1.5 Litre Coke / Fanta / Sprite","price":260,"cat":"drinks","group":"Soft Drinks"},
-  {"name":"Badam Juice","price":120,"cat":"drinks","group":"Soft Drinks"},
-  {"name":"Redbull","price":150,"cat":"drinks","group":"Soft Drinks"},
-  {"name":"Extreme","price":180,"cat":"drinks","group":"Soft Drinks"},
-  {"name":"Apple Cider (soft drink)","price":280,"cat":"drinks","group":"Soft Drinks"},
-  {"name":"Mineral Water","price":30,"cat":"drinks","group":"Soft Drinks"}
+  {
+    name:"Chicken Sausage (2 pcs)",
+    price:160,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
+
+  {
+    name:"Sausage Chilly (2 pcs)",
+    price:180,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
+
+  {
+    name:"Hot Chicken Wings",
+    price:340,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
+
+  {
+    name:"Wings Fry",
+    price:320,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
+
+  {
+    name:"Chicken Drumstick",
+    price:300,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
+
+  {
+    name:"Chicken Drumstick (Chilly)",
+    price:350,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
+
+  {
+    name:"Dragon Chicken",
+    price:380,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
+
+  {
+    name:"Chicken Fry Sadeko",
+    price:350,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
+
+  {
+    name:"Chicken Boil Sadeko",
+    price:360,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
+
+  {
+    name:"Jate Kalejo",
+    price:320,
+    cat:"nonveg",
+    group:"Non-Veg Snacks"
+  },
+
+
+  /* ---------- VEG SNACKS ---------- */
+
+  {
+    name:"Chatpate",
+    price:150,
+    cat:"veg",
+    group:"Veg Snacks"
+  },
+
+  {
+    name:"Wai-Wai Sadeko",
+    price:150,
+    cat:"veg",
+    group:"Veg Snacks"
+  },
+
+
+  /* =====================================================
+     IMPORTANT
+     =====================================================
+
+     Paste the REST of your original menu items here.
+
+     Do NOT delete your existing menu items.
+
+     The JavaScript system below works automatically with
+     every item that has:
+
+       name
+       price
+       cat
+       group
+
+     ===================================================== */
+
 ];
 
 
-const foodImages = {
+/* =========================================================
+   CONFIGURATION
+   ========================================================= */
 
-  nonveg:
-    "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80",
+const CONFIG = {
 
-  veg:
-    "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80",
+  whatsappNumber:"9779700161163",
 
-  momo:
-    "https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?auto=format&fit=crop&w=900&q=80",
+  storageKey:"nightKitchenCart",
 
-  noodles:
-    "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=80",
+  currency:"Rs",
 
-  rice:
-    "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=900&q=80",
+  restaurantName:"Night Kitchen",
 
-  biryani:
-    "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=900&q=80",
-
-  drinks:
-    "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=80"
+  companyName:"GoBite Delivery Itahari"
 
 };
 
 
-const $ = id => document.getElementById(id);
+/* =========================================================
+   STATE
+   ========================================================= */
+
+let cart = [];
+
+let activeFilter = "all";
+
+let toastTimer = null;
 
 
-const intro = $("bagIntro");
-const bag = $("deliveryBag");
-const enter = $("enterBagBtn");
-const skip = $("skipIntro");
+/* =========================================================
+   LOAD CART
+   ========================================================= */
 
-const replay = $("replayBag");
-const again = $("menuBagButton");
+try{
 
-const status = $("introStatus");
-const bar = $("progressBar");
+  const savedCart =
+    localStorage.getItem(CONFIG.storageKey);
 
-let busy = false;
+  if(savedCart){
 
+    const parsed =
+      JSON.parse(savedCart);
 
-/* BAG INTRO */
+    if(Array.isArray(parsed)){
 
-function enterBag(){
-
-  if(busy) return;
-
-  busy = true;
-
-  bag.classList.add("opening");
-
-  status.textContent =
-    "Opening your GoBite delivery...";
-
-  bar.style.width = "35%";
-
-
-  setTimeout(() => {
-
-    status.textContent =
-      "Entering the kitchen...";
-
-    bar.style.width = "72%";
-
-    intro.classList.add("zooming");
-
-  },650);
-
-
-  setTimeout(() => {
-
-    bar.style.width = "100%";
-
-    document.body.classList.remove(
-      "intro-active"
-    );
-
-    document.body.classList.add(
-      "intro-entered"
-    );
-
-    intro.classList.add("done");
-
-    busy = false;
-
-  },1650);
-
-}
-
-
-function skipBag(){
-
-  if(busy) return;
-
-  bar.style.width = "100%";
-
-  document.body.classList.remove(
-    "intro-active"
-  );
-
-  document.body.classList.add(
-    "intro-entered"
-  );
-
-  intro.classList.add("done");
-
-}
-
-
-function replayBag(){
-
-  if(busy) return;
-
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
-
-  document.body.classList.add(
-    "intro-active"
-  );
-
-  document.body.classList.remove(
-    "intro-entered"
-  );
-
-  intro.classList.remove("done");
-
-  bag.classList.remove("opening");
-
-  status.textContent =
-    "Tap the GoBite bag to explore tonight's menu.";
-
-  bar.style.width = "0%";
-
-}
-
-
-bag.addEventListener(
-  "click",
-  enterBag
-);
-
-enter.addEventListener(
-  "click",
-  enterBag
-);
-
-skip.addEventListener(
-  "click",
-  skipBag
-);
-
-replay.addEventListener(
-  "click",
-  replayBag
-);
-
-again.addEventListener(
-  "click",
-  replayBag
-);
-
-
-document.addEventListener(
-  "keydown",
-  e => {
-
-    if(e.key === "Escape"){
-
-      if(
-        document.body.classList.contains(
-          "intro-active"
+      cart = parsed
+        .filter(item =>
+          item &&
+          typeof item.name === "string" &&
+          Number(item.price) >= 0 &&
+          Number(item.qty) > 0
         )
-      ){
-
-        skipBag();
-
-      }
-
-      closeCart();
+        .map(item => ({
+          name:item.name,
+          price:Number(item.price),
+          qty:Number(item.qty)
+        }));
 
     }
 
   }
-);
 
+}catch(error){
 
-/* CART */
-
-let cart = [];
-
-try{
-
-  cart =
-    JSON.parse(
-      localStorage.getItem(
-        "nightKitchenCart"
-      ) || "[]"
-    );
-
-  if(!Array.isArray(cart)){
-    cart = [];
-  }
-
-}catch(e){
+  console.warn(
+    "Could not load saved cart.",
+    error
+  );
 
   cart = [];
 
 }
 
 
-let activeFilter = "all";
+/* =========================================================
+   ELEMENTS
+   ========================================================= */
+
+const menuGrid =
+  document.getElementById("menuGrid");
+
+const searchInput =
+  document.getElementById("searchInput");
+
+const noResults =
+  document.getElementById("noResults");
+
+const filters =
+  document.getElementById("filters");
+
+const cartCount =
+  document.getElementById("cartCount");
+
+const cartItems =
+  document.getElementById("cartItems");
+
+const cartEmpty =
+  document.getElementById("cartEmpty");
+
+const cartTotal =
+  document.getElementById("cartTotal");
+
+const drawer =
+  document.getElementById("cartDrawer");
+
+const overlay =
+  document.getElementById("cartOverlay");
+
+const toast =
+  document.getElementById("toast");
+
+const openCart =
+  document.getElementById("openCart");
+
+const closeCart =
+  document.getElementById("closeCart");
+
+const sendOrder =
+  document.getElementById("sendOrder");
 
 
-const grid = $("menuGrid");
-const search = $("searchInput");
-const noResults = $("noResults");
+/* =========================================================
+   HELPER
+   ========================================================= */
 
-const count = $("cartCount");
-const items = $("cartItems");
-const empty = $("cartEmpty");
+function money(number){
 
-const totalEl = $("cartTotal");
-
-const drawer = $("cartDrawer");
-const overlay = $("cartOverlay");
-
-const toast = $("toast");
-
-
-function money(n){
-
-  return Number(n).toLocaleString(
-    "en-IN"
-  );
+  return Number(number).toLocaleString("en-IN");
 
 }
 
 
-function esc(s){
+/* =========================================================
+   HTML ESCAPE
+   ========================================================= */
 
-  return String(s).replace(
+function escapeHtml(value){
+
+  return String(value).replace(
     /[&<>"']/g,
-    c => ({
+
+    character => ({
       "&":"&amp;",
       "<":"&lt;",
       ">":"&gt;",
       '"':"&quot;",
       "'":"&#039;"
-    }[c])
+    }[character])
+
   );
 
 }
 
 
-function img(item){
+/* =========================================================
+   NORMALIZE TEXT
+   ========================================================= */
 
-  return (
-    foodImages[item.cat] ||
-    foodImages.veg
+function normalizeText(value){
+
+  return String(value)
+    .toLowerCase()
+    .trim();
+
+}
+
+
+/* =========================================================
+   GET ITEM
+   ========================================================= */
+
+function getMenuItem(name){
+
+  return menu.find(
+    item => item.name === name
   );
 
 }
 
 
-/* MENU */
+/* =========================================================
+   RENDER MENU
+   ========================================================= */
 
 function renderMenu(){
 
-  const q =
-    search.value
-      .trim()
-      .toLowerCase();
+  if(!menuGrid){
+    return;
+  }
+
+  const query =
+    searchInput
+      ? normalizeText(searchInput.value)
+      : "";
 
 
   const filtered =
-    menu.filter(i =>
+    menu.filter(item => {
 
-      (
+      const matchesFilter =
         activeFilter === "all" ||
-        i.cat === activeFilter
-      )
-
-      &&
-
-      (
-        !q ||
-
-        i.name
-          .toLowerCase()
-          .includes(q)
-
-        ||
-
-        i.group
-          .toLowerCase()
-          .includes(q)
-      )
-
-    );
+        item.cat === activeFilter;
 
 
-  grid.innerHTML =
-    filtered.map(i => `
+      const searchableText =
+        `${item.name} ${item.group}`;
 
-      <article class="menu-card reveal visible">
 
-        <div>
+      const matchesSearch =
+        !query ||
+        normalizeText(searchableText)
+          .includes(query);
 
-          <div class="food-image">
 
-            <img
-              src="${img(i)}"
-              alt="${esc(i.name)}"
-              loading="lazy"
-            >
+      return matchesFilter && matchesSearch;
 
-          </div>
+    });
+
+
+  menuGrid.innerHTML =
+    filtered.map(
+      (item,index) => `
+
+        <article
+          class="menu-card reveal"
+          style="--card-delay:${Math.min(index * 35,350)}ms"
+        >
 
           <span class="category-tag">
-            ${esc(i.group)}
+            ${escapeHtml(item.group)}
           </span>
+
 
           <div class="card-top">
 
             <h3>
-              ${esc(i.name)}
+              ${escapeHtml(item.name)}
             </h3>
 
             <span class="price">
-              Rs ${money(i.price)}
+              ${CONFIG.currency}
+              ${money(item.price)}
             </span>
 
           </div>
+
 
           <p>
             Freshly prepared for your order.
           </p>
 
-        </div>
+
+          <button
+            class="add-btn"
+            type="button"
+            data-name="${escapeHtml(item.name)}"
+          >
+            + Add to order
+          </button>
+
+        </article>
+
+      `
+    ).join("");
 
 
-        <button
-          class="add-btn"
-          data-name="${esc(i.name)}"
-        >
-          + Add to order
-        </button>
+  if(noResults){
 
-      </article>
+    noResults.style.display =
+      filtered.length
+        ? "none"
+        : "block";
 
-    `).join("");
+  }
 
 
-  noResults.style.display =
-    filtered.length
-      ? "none"
-      : "block";
+  /* ADD BUTTONS */
 
-
-  grid
+  menuGrid
     .querySelectorAll(".add-btn")
     .forEach(button => {
 
       button.addEventListener(
         "click",
+
         () => {
 
           addToCart(
@@ -479,41 +473,69 @@ function renderMenu(){
           );
 
         }
+
       );
 
     });
 
+
+  /* Reveal cards */
+
+  requestAnimationFrame(() => {
+
+    menuGrid
+      .querySelectorAll(".reveal")
+      .forEach(card => {
+
+        card.classList.add("visible");
+
+      });
+
+  });
+
 }
 
 
-/* ADD CART */
+/* =========================================================
+   ADD TO CART
+   ========================================================= */
 
 function addToCart(name){
 
   const item =
-    menu.find(
-      i => i.name === name
+    getMenuItem(name);
+
+
+  if(!item){
+
+    console.warn(
+      "Menu item not found:",
+      name
     );
 
-  if(!item) return;
+    return;
+
+  }
 
 
-  const old =
+  const existing =
     cart.find(
-      i => i.name === name
+      food => food.name === name
     );
 
 
-  if(old){
+  if(existing){
 
-    old.qty++;
+    existing.qty += 1;
 
   }else{
 
     cart.push({
 
       name:item.name,
-      price:item.price,
+
+      price:Number(item.price),
+
       qty:1
 
     });
@@ -521,183 +543,312 @@ function addToCart(name){
   }
 
 
-  save();
+  saveCart();
 
   renderCart();
 
   showToast(
-    item.name + " added"
+    `${item.name} added to your order`
   );
+
+
+  /* Small visual feedback */
+
+  if(openCart){
+
+    openCart.classList.remove(
+      "cart-pop"
+    );
+
+    void openCart.offsetWidth;
+
+    openCart.classList.add(
+      "cart-pop"
+    );
+
+  }
 
 }
 
 
-/* CHANGE QTY */
+/* =========================================================
+   CHANGE QUANTITY
+   ========================================================= */
 
-function changeQty(
-  name,
-  delta
-){
+function changeQty(name,delta){
 
-  const i =
+  const item =
     cart.find(
-      x => x.name === name
+      food => food.name === name
     );
 
-  if(!i) return;
+
+  if(!item){
+    return;
+  }
 
 
-  i.qty += delta;
+  item.qty += delta;
 
 
-  if(i.qty <= 0){
+  if(item.qty <= 0){
 
     cart =
       cart.filter(
-        x => x.name !== name
+        food => food.name !== name
       );
 
   }
 
 
-  save();
+  saveCart();
 
   renderCart();
 
 }
 
 
-/* SAVE */
+/* =========================================================
+   SAVE CART
+   ========================================================= */
 
-function save(){
+function saveCart(){
 
-  localStorage.setItem(
-    "nightKitchenCart",
-    JSON.stringify(cart)
+  try{
+
+    localStorage.setItem(
+      CONFIG.storageKey,
+      JSON.stringify(cart)
+    );
+
+  }catch(error){
+
+    console.warn(
+      "Could not save cart.",
+      error
+    );
+
+  }
+
+}
+
+
+/* =========================================================
+   CART TOTAL QUANTITY
+   ========================================================= */
+
+function getCartQuantity(){
+
+  return cart.reduce(
+    (total,item) =>
+      total + Number(item.qty),
+    0
   );
 
 }
 
 
-/* RENDER CART */
+/* =========================================================
+   CART TOTAL PRICE
+   ========================================================= */
+
+function getCartTotal(){
+
+  return cart.reduce(
+    (total,item) =>
+      total +
+      Number(item.price) *
+      Number(item.qty),
+
+    0
+  );
+
+}
+
+
+/* =========================================================
+   RENDER CART
+   ========================================================= */
 
 function renderCart(){
 
-  const qty =
-    cart.reduce(
-      (s,i) =>
-        s + i.qty,
-      0
-    );
+  const totalQty =
+    getCartQuantity();
 
 
   const total =
-    cart.reduce(
-      (s,i) =>
-        s + i.qty * i.price,
-      0
-    );
+    getCartTotal();
 
 
-  count.textContent = qty;
+  if(cartCount){
 
-  totalEl.textContent =
-    money(total);
+    cartCount.textContent =
+      totalQty;
 
+  }
+
+
+  if(cartTotal){
+
+    cartTotal.textContent =
+      money(total);
+
+  }
+
+
+  /* EMPTY */
 
   if(!cart.length){
 
-    items.innerHTML = "";
+    if(cartItems){
 
-    items.style.display =
-      "none";
+      cartItems.innerHTML = "";
 
-    empty.style.display =
-      "block";
+      cartItems.style.display =
+        "none";
+
+    }
+
+
+    if(cartEmpty){
+
+      cartEmpty.style.display =
+        "flex";
+
+    }
+
 
     return;
 
   }
 
 
-  items.style.display =
-    "block";
+  /* HAS ITEMS */
 
-  empty.style.display =
-    "none";
+  if(cartItems){
+
+    cartItems.style.display =
+      "block";
+
+  }
 
 
-  items.innerHTML =
-    cart.map(i => `
+  if(cartEmpty){
 
-      <div class="cart-item">
+    cartEmpty.style.display =
+      "none";
 
-        <div>
+  }
 
-          <h4>
-            ${esc(i.name)}
-          </h4>
 
-          <div class="item-price">
-            Rs ${money(i.price)} each
+  if(!cartItems){
+    return;
+  }
+
+
+  cartItems.innerHTML =
+    cart.map(
+      item => `
+
+        <div
+          class="cart-item"
+          data-name="${escapeHtml(item.name)}"
+        >
+
+          <div>
+
+            <h4>
+              ${escapeHtml(item.name)}
+            </h4>
+
+            <div class="item-price">
+              ${CONFIG.currency}
+              ${money(item.price)}
+              each
+            </div>
+
+
+            <div class="qty">
+
+              <button
+                type="button"
+                class="qty-minus"
+                data-name="${escapeHtml(item.name)}"
+                aria-label="Decrease quantity"
+              >
+                −
+              </button>
+
+
+              <span>
+                ${item.qty}
+              </span>
+
+
+              <button
+                type="button"
+                class="qty-plus"
+                data-name="${escapeHtml(item.name)}"
+                aria-label="Increase quantity"
+              >
+                +
+              </button>
+
+            </div>
+
           </div>
 
 
-          <div class="qty">
-
-            <button
-              data-action="minus"
-              data-name="${esc(i.name)}"
-            >
-              −
-            </button>
-
-            <span>
-              ${i.qty}
-            </span>
-
-            <button
-              data-action="plus"
-              data-name="${esc(i.name)}"
-            >
-              +
-            </button>
-
-          </div>
+          <strong>
+            ${CONFIG.currency}
+            ${money(item.price * item.qty)}
+          </strong>
 
         </div>
 
-
-        <strong>
-          Rs ${money(
-            i.price * i.qty
-          )}
-        </strong>
-
-      </div>
-
-    `).join("");
+      `
+    ).join("");
 
 
-  items
-    .querySelectorAll("button")
+  /* QUANTITY BUTTONS */
+
+  cartItems
+    .querySelectorAll(".qty-minus")
     .forEach(button => {
 
       button.addEventListener(
         "click",
+
         () => {
 
           changeQty(
-
             button.dataset.name,
-
-            button.dataset.action === "plus"
-              ? 1
-              : -1
-
+            -1
           );
 
         }
+
+      );
+
+    });
+
+
+  cartItems
+    .querySelectorAll(".qty-plus")
+    .forEach(button => {
+
+      button.addEventListener(
+        "click",
+
+        () => {
+
+          changeQty(
+            button.dataset.name,
+            1
+          );
+
+        }
+
       );
 
     });
@@ -705,36 +856,60 @@ function renderCart(){
 }
 
 
-/* CART OPEN */
+/* =========================================================
+   OPEN CART
+   ========================================================= */
 
-function openCart(){
+function openCartDrawer(){
 
-  drawer.classList.add(
-    "open"
-  );
+  if(!drawer){
+    return;
+  }
 
-  overlay.classList.add(
-    "show"
-  );
+
+  drawer.classList.add("open");
+
+
+  if(overlay){
+
+    overlay.classList.add("show");
+
+  }
+
 
   document.body.classList.add(
     "no-scroll"
   );
 
+
+  renderCart();
+
 }
 
 
-/* CART CLOSE */
+/* =========================================================
+   CLOSE CART
+   ========================================================= */
 
-function closeCart(){
+function closeCartDrawer(){
 
-  drawer.classList.remove(
-    "open"
-  );
+  if(drawer){
 
-  overlay.classList.remove(
-    "show"
-  );
+    drawer.classList.remove(
+      "open"
+    );
+
+  }
+
+
+  if(overlay){
+
+    overlay.classList.remove(
+      "show"
+    );
+
+  }
+
 
   document.body.classList.remove(
     "no-scroll"
@@ -743,225 +918,644 @@ function closeCart(){
 }
 
 
-/* CART EVENTS */
+/* =========================================================
+   CART EVENTS
+   ========================================================= */
 
-$("openCart").addEventListener(
-  "click",
-  openCart
-);
+if(openCart){
 
-$("closeCart").addEventListener(
-  "click",
-  closeCart
-);
+  openCart.addEventListener(
+    "click",
+    openCartDrawer
+  );
 
-$("contactOrder").addEventListener(
-  "click",
-  openCart
-);
-
-overlay.addEventListener(
-  "click",
-  closeCart
-);
+}
 
 
-/* SEARCH */
+if(closeCart){
 
-search.addEventListener(
-  "input",
-  renderMenu
-);
+  closeCart.addEventListener(
+    "click",
+    closeCartDrawer
+  );
 
-
-/* FILTER */
-
-document
-  .querySelectorAll(".filter")
-  .forEach(button => {
-
-    button.addEventListener(
-      "click",
-      () => {
-
-        document
-          .querySelectorAll(".filter")
-          .forEach(
-            x =>
-              x.classList.remove(
-                "active"
-              )
-          );
+}
 
 
-        button.classList.add(
-          "active"
-        );
+if(overlay){
+
+  overlay.addEventListener(
+    "click",
+    closeCartDrawer
+  );
+
+}
 
 
-        activeFilter =
-          button.dataset.filter;
+/* =========================================================
+   ESCAPE KEY
+   ========================================================= */
 
+document.addEventListener(
+  "keydown",
 
-        renderMenu();
+  event => {
 
-      }
-    );
+    if(event.key === "Escape"){
 
-  });
-
-
-/* WHATSAPP ORDER */
-
-$("sendOrder").addEventListener(
-  "click",
-  () => {
-
-    if(!cart.length){
-
-      showToast(
-        "Add items before ordering"
-      );
-
-      return;
+      closeCartDrawer();
 
     }
 
-
-    const lines =
-      cart.map(
-        i =>
-          `• ${i.name} x${i.qty} — Rs ${money(
-            i.price * i.qty
-          )}`
-      );
-
-
-    const total =
-      cart.reduce(
-        (s,i) =>
-          s + i.qty * i.price,
-        0
-      );
-
-
-    const msg = [
-
-      "Hello GoBite Delivery Itahari! 👋",
-
-      "",
-
-      "I'd like to place an order:",
-
-      "",
-
-      ...lines,
-
-      "",
-
-      `Total: Rs ${money(total)}`,
-
-      "",
-
-      "Name:",
-
-      "Address:",
-
-      "Phone:"
-
-    ].join("\n");
-
-
-    window.open(
-
-      "https://wa.me/9779700161163?text=" +
-      encodeURIComponent(msg),
-
-      "_blank",
-
-      "noopener,noreferrer"
-
-    );
-
   }
+
 );
 
 
-/* TOAST */
+/* =========================================================
+   SEARCH
+   ========================================================= */
 
-function showToast(t){
+if(searchInput){
 
-  toast.textContent = t;
+  let searchTimer = null;
+
+
+  searchInput.addEventListener(
+    "input",
+
+    () => {
+
+      clearTimeout(searchTimer);
+
+
+      searchTimer =
+        setTimeout(
+          renderMenu,
+          100
+        );
+
+    }
+
+  );
+
+}
+
+
+/* =========================================================
+   FILTERS
+   ========================================================= */
+
+if(filters){
+
+  filters
+    .querySelectorAll(".filter")
+    .forEach(button => {
+
+      button.addEventListener(
+        "click",
+
+        () => {
+
+          activeFilter =
+            button.dataset.filter ||
+            "all";
+
+
+          filters
+            .querySelectorAll(".filter")
+            .forEach(item => {
+
+              item.classList.remove(
+                "active"
+              );
+
+            });
+
+
+          button.classList.add(
+            "active"
+          );
+
+
+          renderMenu();
+
+
+          /* Smooth scroll on mobile */
+
+          if(window.innerWidth <= 700){
+
+            const menuSection =
+              document.getElementById(
+                "menu"
+              );
+
+            if(menuSection){
+
+              menuSection.scrollIntoView({
+                behavior:"smooth",
+                block:"start"
+              });
+
+            }
+
+          }
+
+        }
+
+      );
+
+    });
+
+}
+
+
+/* =========================================================
+   WHATSAPP ORDER
+   ========================================================= */
+
+function sendWhatsAppOrder(){
+
+  if(!cart.length){
+
+    showToast(
+      "Your order is empty"
+    );
+
+    return;
+
+  }
+
+
+  const total =
+    getCartTotal();
+
+
+  let message =
+    `🌙 *${CONFIG.restaurantName}*%0A`;
+
+  message +=
+    `GoBite Delivery Itahari%0A%0A`;
+
+  message +=
+    `🛒 *My Order:*%0A`;
+
+
+  cart.forEach(
+    (item,index) => {
+
+      message +=
+        `${index + 1}. ${item.name} × ${item.qty} — Rs ${money(item.price * item.qty)}%0A`;
+
+    }
+  );
+
+
+  message +=
+    `%0A💰 *Total: Rs ${money(total)}*%0A`;
+
+  message +=
+    `%0A📍 Please confirm my order and delivery details.`;
+
+
+  const whatsappURL =
+    `https://wa.me/${CONFIG.whatsappNumber}?text=${message}`;
+
+
+  window.open(
+    whatsappURL,
+    "_blank",
+    "noopener,noreferrer"
+  );
+
+}
+
+
+if(sendOrder){
+
+  sendOrder.addEventListener(
+    "click",
+    sendWhatsAppOrder
+  );
+
+}
+
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+function showToast(message){
+
+  if(!toast){
+    return;
+  }
+
+
+  toast.textContent =
+    message;
+
 
   toast.classList.add(
     "show"
   );
 
-  clearTimeout(
-    showToast.t
-  );
+
+  clearTimeout(toastTimer);
 
 
-  showToast.t =
+  toastTimer =
     setTimeout(
-      () =>
+      () => {
+
         toast.classList.remove(
           "show"
-        ),
-      1800
+        );
+
+      },
+
+      2400
     );
 
 }
 
 
-/* SCROLL REVEAL */
+/* =========================================================
+   NAV LINK SMOOTH CLOSE
+   ========================================================= */
 
-const observer =
-  new IntersectionObserver(
+document
+  .querySelectorAll(".nav-links a")
+  .forEach(link => {
 
-    entries =>
+    link.addEventListener(
+      "click",
 
-      entries.forEach(
-        entry => {
+      () => {
 
-          if(
-            entry.isIntersecting
-          ){
+        closeCartDrawer();
 
-            entry.target.classList.add(
-              "visible"
-            );
+      }
+
+    );
+
+  });
+
+
+/* =========================================================
+   REVEAL ANIMATION
+   ========================================================= */
+
+function setupReveal(){
+
+  const elements =
+    document.querySelectorAll(
+      ".reveal"
+    );
+
+
+  if(!elements.length){
+    return;
+  }
+
+
+  if(
+    !("IntersectionObserver" in window)
+  ){
+
+    elements.forEach(
+      element =>
+        element.classList.add(
+          "visible"
+        )
+    );
+
+    return;
+
+  }
+
+
+  const observer =
+    new IntersectionObserver(
+
+      entries => {
+
+        entries.forEach(
+          entry => {
+
+            if(
+              entry.isIntersecting
+            ){
+
+              entry.target.classList.add(
+                "visible"
+              );
+
+              observer.unobserve(
+                entry.target
+              );
+
+            }
 
           }
+        );
 
-        }
-      ),
+      },
 
-    {
-      threshold:.08
+      {
+        threshold:.12,
+
+        rootMargin:
+          "0px 0px -40px 0px"
+      }
+
+    );
+
+
+  elements.forEach(
+    element =>
+      observer.observe(element)
+  );
+
+}
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+   ========================================================= */
+
+function setupActiveNavigation(){
+
+  const sections =
+    document.querySelectorAll(
+      "main section[id]"
+    );
+
+
+  const links =
+    document.querySelectorAll(
+      ".nav-links a"
+    );
+
+
+  if(
+    !sections.length ||
+    !links.length ||
+    !("IntersectionObserver" in window)
+  ){
+
+    return;
+
+  }
+
+
+  const sectionObserver =
+    new IntersectionObserver(
+
+      entries => {
+
+        entries.forEach(
+          entry => {
+
+            if(entry.isIntersecting){
+
+              links.forEach(
+                link => {
+
+                  link.classList.remove(
+                    "active"
+                  );
+
+
+                  if(
+                    link.getAttribute(
+                      "href"
+                    ) ===
+                    `#${entry.target.id}`
+                  ){
+
+                    link.classList.add(
+                      "active"
+                    );
+
+                  }
+
+                }
+              );
+
+            }
+
+          }
+        );
+
+      },
+
+      {
+        threshold:.35
+      }
+
+    );
+
+
+  sections.forEach(
+    section =>
+      sectionObserver.observe(
+        section
+      )
+  );
+
+}
+
+
+/* =========================================================
+   BUTTON RIPPLE
+   ========================================================= */
+
+function setupButtonEffects(){
+
+  const buttons =
+    document.querySelectorAll(
+      ".primary-button, .secondary-button, .filter, .add-btn, .cart-button, .whatsapp-order-button"
+    );
+
+
+  buttons.forEach(button => {
+
+    button.addEventListener(
+      "pointerdown",
+
+      event => {
+
+        const rect =
+          button.getBoundingClientRect();
+
+
+        const ripple =
+          document.createElement(
+            "span"
+          );
+
+
+        ripple.className =
+          "js-ripple";
+
+
+        ripple.style.left =
+          `${event.clientX - rect.left}px`;
+
+
+        ripple.style.top =
+          `${event.clientY - rect.top}px`;
+
+
+        button.appendChild(
+          ripple
+        );
+
+
+        setTimeout(
+          () => ripple.remove(),
+          600
+        );
+
+      }
+
+    );
+
+  });
+
+}
+
+
+/* =========================================================
+   PREVENT DOUBLE SUBMIT
+   ========================================================= */
+
+if(sendOrder){
+
+  sendOrder.addEventListener(
+    "click",
+
+    () => {
+
+      sendOrder.disabled =
+        true;
+
+
+      setTimeout(
+        () => {
+
+          sendOrder.disabled =
+            false;
+
+        },
+
+        1200
+      );
+
     }
 
   );
 
+}
 
-document
-  .querySelectorAll(".reveal")
-  .forEach(
-    element =>
-      observer.observe(
-        element
-      )
+
+/* =========================================================
+   MOBILE TOUCH POLISH
+   ========================================================= */
+
+document.addEventListener(
+  "touchstart",
+  () => {},
+  {passive:true}
+);
+
+
+/* =========================================================
+   INITIALIZE
+   ========================================================= */
+
+function initializeNightKitchen(){
+
+  renderMenu();
+
+  renderCart();
+
+  setupReveal();
+
+  setupActiveNavigation();
+
+  setupButtonEffects();
+
+
+  /* Default filter */
+
+  if(filters){
+
+    const allButton =
+      filters.querySelector(
+        '[data-filter="all"]'
+      );
+
+
+    if(allButton){
+
+      allButton.classList.add(
+        "active"
+      );
+
+    }
+
+  }
+
+}
+
+
+/* =========================================================
+   START
+   ========================================================= */
+
+if(
+  document.readyState ===
+  "loading"
+){
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    initializeNightKitchen
   );
 
+}else{
 
-/* YEAR */
+  initializeNightKitchen();
 
-$("year").textContent =
-  new Date().getFullYear();
+}
 
 
-/* INITIALIZE */
+/* =========================================================
+   OPTIONAL GLOBAL FUNCTIONS
+   Useful if HTML buttons call these directly.
+   ========================================================= */
 
-renderMenu();
+window.NightKitchen = {
 
-renderCart();
+  addToCart,
+
+  changeQty,
+
+  openCart:
+    openCartDrawer,
+
+  closeCart:
+    closeCartDrawer,
+
+  renderMenu,
+
+  renderCart,
+
+  sendWhatsAppOrder,
+
+  showToast
+
+};
+```
